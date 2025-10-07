@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:58:32 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/03 22:07:14 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/07 14:43:27 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	int	t;
-	int	x;
+	int		t;
+	int		x;
 
 	x = 0;
 	i = 0;
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		t++;
 	while (src[x])
 		x++;
-	while (i < dstsize - 1 || src[i] )
+	while (i < dstsize - 1 || src[i])
 	{
 		dst[i + t] = src[i];
 		i++;

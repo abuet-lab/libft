@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 12:05:53 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/03 21:38:40 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/07 12:10:45 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	zero = '\0';
 	temp = (unsigned char *) s;
-	while (n >= 0)
+	while (n > 0)
 	{
 		*temp++ = zero;
 		n--;

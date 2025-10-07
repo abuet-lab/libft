@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/02 10:07:43 by yourlogin         #+#    #+#             */
-/*   Updated: 2025/10/07 15:14:58 by abuet            ###   ########.fr       */
+/*   Created: 2025/10/07 17:01:22 by abuet             #+#    #+#             */
+/*   Updated: 2025/10/07 18:05:02 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include "libft.h"
+#include <string.h>
 
-int	ft_isascii(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
+	size_t	i;
+	char	*temp;
+
+	temp = (char *) s;
+	i = ft_strlen(temp);
+	while (i > 0)
+	{
+		if (temp[i] == c)
+			return (temp + i);
+		i--;
+	}
+	if (temp[i] == c)
+		return (temp + i);
 	return (0);
 }
-// int main (void)
+
+// int main(void)
 // {
-// 	int i = 128;
-//     while (i <= 138)
-//     {
-//         printf("%d",ft_isascii(i));
-//         i++;
-//     }
+// 	char tesst[] = "b5ah";
+// 	printf("%s\n",ft_strrchr(tesst, 'c'));
+// 	printf("%s\n",strrchr(tesst, 'c'));
 // }

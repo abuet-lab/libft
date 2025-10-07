@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:41:36 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/03 22:07:37 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/07 14:45:15 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "stdio.h"
 
- size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
- {
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+{
 	size_t	i;
 
 	i = 0;
@@ -27,7 +27,7 @@
 	while (src[i])
 		i++;
 	return (i);
- }
+}
 
 //  int main (void)
 //  {

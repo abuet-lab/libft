@@ -1,26 +1,60 @@
-NAME = libft
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: abuet <abuet@student.42.fr>                +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/10/07 15:03:41 by abuet             #+#    #+#              #
+#    Updated: 2025/10/07 18:38:25 by abuet            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
-CC = gcc
+################################################################################
+## ARGUMENTS
 
-FLAGS = -Wall -Wextra -Werror
+NAME	= libft.a
+CFLAGS	= -Wall -Wextra -Werror
+cc 	= gcc
 
-SRC = ft_bzero.c	ft_isalnum.c	ft_isalpha.c	ft_isascii.c	ft_isdigit.c	ft_isprint.c\
-	  ft_memcpy.c 	ft_memmove.c	ft_memset.c		ft_strlcat.c 	ft_strlcpy.c 	ft_strlen.c\
-	  ft_toupper.c 	
+################################################################################
+## SOURCES
 
+HEADER = libft.h
 
-OBJ = $(SRC:.c=.o)
+OPTION = -c -I $(HEADER)
 
-all : $(NAME) 
+SRC_FILES = ft_isalpha.c \
+	ft_isdigit.c \
+	ft_isalnum.c \
+	ft_isascii.c \
+	ft_isprint.c \
+	ft_strlen.c \
+	ft_memset.c \
+	ft_bzero.c \
+	ft_memcpy.c \
+	ft_memmove.c \
+	ft_strlcpy.c \
+	ft_strlcat.c \
+	ft_toupper.c \
+	ft_tolower.c \
+	ft_strchr.c \
+	ft_strrchr.c \
+	ft_strncmp.c \
 
-$(NAME) :  $(OBJ)
-	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
+OBJ_FILES =  $(SRC_FILES:.c=.o)
 
-%.o:%.c
-	$(CC) $(FLAGS) -c $< -o $@
+################################################################################
+## RULES
 
+all: $(NAME)
+
+$(NAME):
+	$(CC) $(CFLAGS) $(OPTION) $(SRC_FILES)
+	ar rc $(NAME) $(OBJ_FILES)
+	
 clean: 
-	rm -f $(OBJ)
+	rm -f $(OBJ_FILES)
 
 fclean: clean
 	rm -f $(NAME)
