@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/07 18:05:43 by abuet             #+#    #+#             */
-/*   Updated: 2025/10/10 13:57:29 by antoinebuet      ###   ########.fr       */
+/*   Created: 2025/10/10 13:27:08 by antoinebuet       #+#    #+#             */
+/*   Updated: 2025/10/10 13:56:12 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
+#include "stdio.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*ts;
 
+	ts = (unsigned char *) s;
 	i = 0;
-	if (n == 0)
-		return (1);
-	while ((s1[i] == s2[i] && i < n) && s1[i])
+	while (i < n && ts[i])
 	{
+		if (ts[i] == c)
+			return (ts + i);
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (0);
 }
 
 // int main(void)
 // {
-// 	char test1[] = "teste";
-// 	char test2[] = "test";
-// 	printf("%d\n", ft_strncmp(test1, test2, 7));
+// 	char c[] = "abc adc";
+// 	printf("%s", ft_memchr(c, 'j', 8));
 // }
