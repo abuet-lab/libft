@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 13:40:53 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/11 13:45:19 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/11 13:52:53 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*ts1;
 	unsigned char	*ts2;
 	size_t			i;
-	
+
 	ts1 = (unsigned char *) s1;
 	ts2 = (unsigned char *) s2;
 	i = 0;
