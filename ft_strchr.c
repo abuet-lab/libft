@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:09:33 by abuet             #+#    #+#             */
-/*   Updated: 2025/10/07 17:41:50 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/11 13:44:42 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (temp[i])
 	{
-		if (temp[i] == c)
+		if (temp[i] == (char) c)
 			return (temp + i);
 		i++;
 	}
-	if (c == '\0')
+	if ((char) c == '\0')
 		return (temp + i);
 	return (0);
 }

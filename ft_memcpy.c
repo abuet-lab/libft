@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 13:22:00 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/07 15:33:44 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/11 13:41:10 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	tdst = (char *) dst;
 	tsrc = (char *) src;
+	if (!dst && !src)
+		return (NULL);
 	while (i < n)
 	{
 		tdst[i] = tsrc[i];
