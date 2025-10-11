@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+         #
+#    By: abuet <abuet@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/07 15:03:41 by abuet             #+#    #+#              #
-#    Updated: 2025/10/10 13:55:18 by antoinebuet      ###   ########.fr        #
+#    Updated: 2025/10/11 16:14:52 by abuet            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,6 +43,7 @@ SRC_FILES = ft_isalpha.c \
 	ft_strncmp.c \
 	ft_memchr.c \
 	ft_memcmp.c \
+	ft_strnstr.c \
 
 OBJ_FILES =  $(SRC_FILES:.c=.o)
 
