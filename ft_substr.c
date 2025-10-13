@@ -1,25 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/11 19:16:41 by abuet             #+#    #+#             */
-/*   Updated: 2025/10/13 13:18:53 by antoinebuet      ###   ########.fr       */
+/*   Created: 2025/10/13 12:19:38 by antoinebuet       #+#    #+#             */
+/*   Updated: 2025/10/13 13:18:16 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+#include <stdio.h>
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	void	*array;
+	char	*substr;
+	int		i;
+	size_t	t;
 
-	array = malloc (nmemb * size);
-	if (!array)
+	i = 0;
+	t = 0;
+	substr = malloc((len * sizeof(char)) + 1);
+	if (!substr)
 		return (NULL);
-	ft_bzero(array, nmemb * size);
-	return (array);
+	while (i < start)
+		i++;
+	while (t < len && s[i])
+		substr[t++] = s[i++];
+	return (substr);
 }
+
+// int main(void)
+// {
+// 	char test[] = "abc defgh";
+// 	printf("%s\n", ft_substr(test, 4, 3));
+// }
