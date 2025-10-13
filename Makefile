@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abuet <abuet@student.42.fr>                +#+  +:+       +#+         #
+#    By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/07 15:03:41 by abuet             #+#    #+#              #
-#    Updated: 2025/10/11 20:36:45 by abuet            ###   ########.fr        #
+#    Updated: 2025/10/13 23:00:01 by antoinebuet      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,9 @@ SRC_FILES = ft_isalpha.c \
 	ft_atoi.c \
 	ft_calloc.c \
 	ft_strdup.c \
+	ft_substr.c\
+	ft_strjoin.c\
+	ft_strtrim.c \
 
 OBJ_FILES =  $(SRC_FILES:.c=.o)
 
