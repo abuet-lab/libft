@@ -6,7 +6,7 @@
 /*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 12:18:17 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/13 23:03:05 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/14 11:18:06 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ int		ft_isalnum(int c);
 int		ft_isprint(int c);
 
 void	ft_bzero(void *s, size_t n);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 //void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
@@ -35,6 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);

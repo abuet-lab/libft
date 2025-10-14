@@ -6,7 +6,7 @@
 /*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 16:23:47 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/13 22:57:33 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/14 10:23:15 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	front = check_front(s1, set);
 	end = check_end(s1, set);
 	newstring = malloc((ft_strlen(s1) - (front + end)) * sizeof(char));
+	if (!newstring)
+		return (NULL);
 	while (front < (ft_strlen(s1) - end))
 		newstring[i++] = s1[front++];
 	return (newstring);

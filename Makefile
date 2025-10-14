@@ -6,7 +6,7 @@
 #    By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/07 15:03:41 by abuet             #+#    #+#              #
-#    Updated: 2025/10/13 23:00:01 by antoinebuet      ###   ########.fr        #
+#    Updated: 2025/10/14 11:18:29 by antoinebuet      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,6 +50,13 @@ SRC_FILES = ft_isalpha.c \
 	ft_substr.c\
 	ft_strjoin.c\
 	ft_strtrim.c \
+	ft_strmapi.c \
+	ft_striteri.c \
+	ft_putchar_fd.c \
+	ft_putstr_fd.c \
+	ft_putendl_ft.c \
+	ft_putnbr_fd.c \
+
 
 OBJ_FILES =  $(SRC_FILES:.c=.o)
 
