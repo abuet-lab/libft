@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:07:02 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/07 15:38:42 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/14 19:20:42 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*tdst;
 	char	*tsrc;
-	size_t	i;
 
 	if (!dst && !src)
 		return (NULL);
@@ -25,19 +24,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	tsrc = (char *) src;
 	if (tdst <= tsrc)
 	{
-		i = 0;
-		while (i++ < len)
-		{
-			tdst[i] = tsrc[i];
-		}
+		while (len--)
+			*tdst++ = *tsrc++;
 	}
-	else
+	else if(tdst > tsrc)
 	{
-		i = len;
-		while (--i > 0)
-		{
-			tdst[i] = tsrc[i];
-		}
+		tdst += len - 1;
+		tsrc += len - 1;
+		while (len--)
+			*tdst-- = *tsrc--;
 	}
 	return (dst);
 }

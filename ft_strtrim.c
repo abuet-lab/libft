@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 16:23:47 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/14 10:23:15 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/14 17:45:29 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-size_t	check_front(char const *s1, char const *set)
+static size_t	check_front(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
@@ -32,7 +32,7 @@ size_t	check_front(char const *s1, char const *set)
 	return (j);
 }
 
-size_t	check_end(char const *s1, char const *set)
+static size_t	check_end(char const *s1, char const *set)
 {
 	size_t	i;
 	size_t	j;
@@ -60,16 +60,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	front = check_front(s1, set);
 	end = check_end(s1, set);
-	newstring = malloc((ft_strlen(s1) - (front + end)) * sizeof(char));
+	newstring = malloc((ft_strlen(s1) - (front + end) + 1) * sizeof(char));
 	if (!newstring)
 		return (NULL);
 	while (front < (ft_strlen(s1) - end))
 		newstring[i++] = s1[front++];
+	newstring[i] = '\0';
 	return (newstring);
 }
 
 // int main(void)
 // {
-// 	char test[] = "aabctestaaabccc";
-// 	printf("%s\n",ft_strtrim(test, "abc"));
+// 	char test[] = "lorem \n ipsum \t dolor \n sit \t amet";
+// 	printf("%s\n",ft_strtrim(test, " "));
 // }
