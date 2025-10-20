@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
+/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 16:23:47 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/14 17:45:29 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/20 16:13:13 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,24 @@ static size_t	check_front(char const *s1, char const *set)
 	return (j);
 }
 
+static size_t	reverse_check_end(char const *s1, char const *set)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = ft_strlen(s1) - 1;
+	while (j > 0)
+	{
+		if (set[i] != s1[j])
+			return ((ft_strlen(s1) - 1) - j);
+		while (set[i] == s1[j])
+			j--;
+		i++;
+	}
+	return ((ft_strlen(s1) - 1) - j);
+}
+
 static size_t	check_end(char const *s1, char const *set)
 {
 	size_t	i;
@@ -39,6 +57,8 @@ static size_t	check_end(char const *s1, char const *set)
 
 	i = ft_strlen(set) - 1;
 	j = ft_strlen(s1) - 1;
+	if (reverse_check_end(s1, set) != 0)
+		return (reverse_check_end(s1, set));
 	while (j > 0)
 	{
 		if (set[i] != s1[j])
@@ -71,6 +91,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 // int main(void)
 // {
-// 	char test[] = "lorem \n ipsum \t dolor \n sit \t amet";
-// 	printf("%s\n",ft_strtrim(test, " "));
+// 	char *s = "\n\t  Hello 42 !  \t\n";
+// 	char *res = ft_strtrim(s, " \n\t");
+// 	printf("%s\n", res);
 // }
