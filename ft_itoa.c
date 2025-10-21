@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
+/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:23:29 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/14 18:52:57 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/21 22:21:36 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,7 @@
 #include <stdio.h>
 #include "libft.h"
 
-// static void	reverse_tab(char *tab)
-// {
-// 	char	*reversetab;
-// 	size_t	i;
-// 	int		j;
-
-// 	i = 0;
-// 	j = ft_strlen(tab) - 1;
-// 	reversetab = malloc((ft_strlen(tab) + 1) * sizeof(char));
-// 	while (i < ft_strlen(tab))
-// 		reversetab[i++] = tab[j--];
-// 	ft_strlcpy(tab, reversetab, ft_strlen(tab) + 1);
-// 	free(reversetab);
-// }
-static long len_int(long n)
+static long	len_int(long n)
 {
 	long	count;
 	long	i;
@@ -41,7 +27,6 @@ static long len_int(long n)
 		count++;
 		i = n;
 	}
-	
 	while (i >= 10)
 	{
 		i /= 10;
@@ -49,6 +34,7 @@ static long len_int(long n)
 	}
 	return (count);
 }
+
 char	*ft_itoa(int n)
 {
 	char	*rep;
@@ -62,13 +48,13 @@ char	*ft_itoa(int n)
 	rep = malloc((count + 2) * sizeof(char));
 	if (!rep)
 		return (NULL);
-	rep[i+1] = '\0';
+	rep[i + 1] = '\0';
 	if (nbr < 0)
 	{
 		nbr *= -1;
 		rep[0] = '-';
 	}
-	if(nbr == 0)
+	if (nbr == 0)
 		rep[0] = '0';
 	while (nbr != 0)
 	{

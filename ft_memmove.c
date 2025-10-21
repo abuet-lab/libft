@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
+/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:07:02 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/14 19:20:42 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/21 22:20:29 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		while (len--)
 			*tdst++ = *tsrc++;
 	}
-	else if(tdst > tsrc)
+	else if (tdst > tsrc)
 	{
 		tdst += len - 1;
 		tsrc += len - 1;

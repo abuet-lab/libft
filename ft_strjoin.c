@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
+/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 15:57:44 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/14 19:38:05 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/21 22:19:03 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	while (s2[j])
 		join[i++] = s2[j++];
-	join[i] = '\0'; 
+	join[i] = '\0';
 	return (join);
 }
 

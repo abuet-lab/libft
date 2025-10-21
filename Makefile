@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: abuet <abuet@student.42.fr>                +#+  +:+       +#+         #
+#    By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/07 15:03:41 by abuet             #+#    #+#              #
-#    Updated: 2025/10/14 16:42:20 by abuet            ###   ########.fr        #
+#    Updated: 2025/10/21 22:11:54 by antoinebuet      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ SRC_FILES = ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_itoa.c \
+	ft_split.c \
 
 
 OBJ_FILES =  $(SRC_FILES:.c=.o)
