@@ -6,7 +6,7 @@
 /*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 16:23:47 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/20 16:13:13 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/28 10:00:27 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,54 +20,38 @@ static size_t	check_front(char const *s1, char const *set)
 	size_t	j;
 
 	i = 0;
-	j = 0;
-	while (set[i])
+	while (s1[i])
 	{
-		if (set[i] != s1[j])
-			return (j);
-		while (set[i] == s1[j])
+		j = 0;
+		while (set[j] && set[j] != s1[i])
 			j++;
+		if (set[j] == '\0')
+			return (i);
 		i++;
 	}
-	return (j);
-}
-
-static size_t	reverse_check_end(char const *s1, char const *set)
-{
-	size_t	i;
-	size_t	j;
-
-	i = 0;
-	j = ft_strlen(s1) - 1;
-	while (j > 0)
-	{
-		if (set[i] != s1[j])
-			return ((ft_strlen(s1) - 1) - j);
-		while (set[i] == s1[j])
-			j--;
-		i++;
-	}
-	return ((ft_strlen(s1) - 1) - j);
+	return (i);
 }
 
 static size_t	check_end(char const *s1, char const *set)
 {
+	size_t	len;
 	size_t	i;
 	size_t	j;
+	char	c;
 
-	i = ft_strlen(set) - 1;
-	j = ft_strlen(s1) - 1;
-	if (reverse_check_end(s1, set) != 0)
-		return (reverse_check_end(s1, set));
-	while (j > 0)
+	len = ft_strlen(s1);
+	i = len;
+	while (i > 0)
 	{
-		if (set[i] != s1[j])
-			return ((ft_strlen(s1) - 1) - j);
-		while (set[i] == s1[j])
-			j--;
+		j = 0;
+		c = s1[i - 1];
+		while (set[j] && set[j] != c)
+			j++;
+		if (set[j] == '\0')
+			return (len - i);
 		i--;
 	}
-	return ((ft_strlen(s1) - 1) - j);
+	return (len - i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -77,9 +61,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	char	*newstring;
 
+	if (!s1)
+		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
 	i = 0;
 	front = check_front(s1, set);
 	end = check_end(s1, set);
+	if (front + end >= ft_strlen(s1))
+		return (ft_strdup(""));
 	newstring = malloc((ft_strlen(s1) - (front + end) + 1) * sizeof(char));
 	if (!newstring)
 		return (NULL);

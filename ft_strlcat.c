@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
+/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:58:32 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/07 14:43:27 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/28 12:35:49 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,30 +17,28 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	int		t;
-	int		x;
+	size_t	size_d;
+	size_t	size_s;
 
-	x = 0;
+	size_s = ft_strlen(src);
+	size_d = ft_strlen(dst);
 	i = 0;
-	t = 0;
-	while (dst[t])
-		t++;
-	while (src[x])
-		x++;
-	while (i < dstsize - 1 || src[i])
+	if (size_d >= dstsize)
+		return (dstsize + size_s);
+	while (i + size_d < dstsize - 1 && src[i])
 	{
-		dst[i + t] = src[i];
+		dst[i + size_d] = src[i];
 		i++;
 	}
-	dst[i] = '\0';
-	return (x + t);
+	dst[size_d + i] = '\0';
+	return (size_s + size_d);
 }
 
 // int main (void)
 // {
-// 	char test1[20] = "test";
-// 	char test2[] = "reje";
-// 	printf("%zu\n", ft_strlcat(test1, test2, 6));
+// 	char test1[11] = "a";
+// 	char test2[] = "lorem";
+// 	printf("%zu\n", ft_strlcat(test1, test2, 15));
 // 	printf("%s\n", test1);
 // 	char test3[20] = "test";
 // 	char test4[] = "reje";

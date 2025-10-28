@@ -6,7 +6,7 @@
 /*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 12:18:17 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/21 22:19:21 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/28 10:18:58 by antoinebuet      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ int		ft_atoi(const char *nptr);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 #endif
