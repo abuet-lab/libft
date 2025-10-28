@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 14:07:02 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/28 11:26:33 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/28 13:42:18 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
-//  int main (void)
-//  {
-// 	char buffer[] = "ABCDE";
-// 	ft_memmove(buffer + 1, buffer,6); // chevauchement géré
-// 	printf("%s\n", buffer); // → "AABCD"
-//  }

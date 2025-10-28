@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 17:01:22 by abuet             #+#    #+#             */
-/*   Updated: 2025/10/28 11:03:27 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/28 13:43:11 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)temp + i);
 	return (0);
 }
-
-// int main(void)
-// {
-// 	char tesst[] = "b5ah";
-// 	printf("%s\n",ft_strrchr(tesst, 'c'));
-// 	printf("%s\n",strrchr(tesst, 'c'));
-// }

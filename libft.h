@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 12:18:17 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/28 10:18:58 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/28 13:44:08 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ void	*ft_memset(void *b, int c, size_t count);
 void	*ft_calloc(size_t nmemb, size_t size);
 void	*ft_memchr(const void *s, int c, size_t n);
 
-char	*ft_strtrim(char const *s1, char const *set);
-
 char	**ft_split(char const *s, char c);
 
 char	*ft_strnstr(const char *big, const char *little, size_t len);
@@ -47,6 +45,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_itoa(int n);
+char	*ft_strtrim(char const *s1, char const *set);
 
 int		ft_toupper(int c);
 int		ft_tolower(int c);

@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:20:09 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/14 17:49:55 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/28 13:43:00 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new[i] = '\0';
 	return (new);
 }
-
-// char to_uppercase(unsigned int i, char c)
-// {
-//     (void)i; 
-//     return ((char)ft_toupper((unsigned char)c));
-// }
-// int main(void)
-// {
-// 	char test[] = "test";
-// 	printf("%s\n", ft_strmapi(test, to_uppercase));
-// }

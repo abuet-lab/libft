@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 12:19:38 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/21 22:20:08 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/28 13:43:19 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[t] = '\0';
 	return (substr);
 }
-
-// int main(void)
-// {
-// 	char test[] = "Lorem ipsum dolor sit amet";
-// 	printf("%s\n", ft_substr(test, 7, 10));
-// }

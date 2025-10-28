@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 13:22:00 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/11 13:41:10 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/28 13:42:15 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-// int main() 
-// {
-// 	char test1[] = "test";
-// 	char test2[] = "zzzz";
-// 	printf("%s",(char *) ft_memcpy(test2, test1, 2));    
-// }

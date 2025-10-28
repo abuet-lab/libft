@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 16:23:47 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/28 10:00:27 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/28 13:43:16 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,10 +78,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	newstring[i] = '\0';
 	return (newstring);
 }
-
-// int main(void)
-// {
-// 	char *s = "\n\t  Hello 42 !  \t\n";
-// 	char *res = ft_strtrim(s, " \n\t");
-// 	printf("%s\n", res);
-// }

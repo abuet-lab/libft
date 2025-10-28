@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 17:15:31 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/07 16:06:56 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/28 13:43:28 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,3 @@ int	ft_toupper(int c)
 		return (c - (97 - 65));
 	return (c);
 }
-
-// int main(void)
-// {
-// 	int c = 97;
-// 	printf("%d", ft_toupper(c));
-// }

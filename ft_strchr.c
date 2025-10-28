@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/07 16:09:33 by abuet             #+#    #+#             */
-/*   Updated: 2025/10/11 13:44:42 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/28 13:42:35 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ char	*ft_strchr(const char *s, int c)
 		return (temp + i);
 	return (0);
 }
-
-// int main (void)
-// {
-// 	char s[] = "abcdefghijklmnop";
-// 	printf("%s\n", ft_strchr(s, 't'+ 256));
-// 	printf("%s", strchr(s, '\0'));
-// }

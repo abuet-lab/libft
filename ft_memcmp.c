@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/10 13:40:53 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/11 13:52:53 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/28 13:42:11 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	return (ts1[i] - ts2[i]);
 }
-// int main (void)
-// {
-// 	char s1[] = "asd";
-// 	char s2[] = "test";
-// 	printf("%d", ft_memcmp(s1, s2, 6));
-// }

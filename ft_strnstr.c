@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 15:35:37 by abuet             #+#    #+#             */
-/*   Updated: 2025/10/11 17:14:35 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/28 13:43:08 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-// int main(void)
-// {
-// 	const char big[] ="AAAAAAAA";
-// 	const char little[] = "AAAAAAAA";
-// 	char *test;
-// 	test = ft_strnstr(big, little, 8);
-// 	printf("%s\n",test);
-// }

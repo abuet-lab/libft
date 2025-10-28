@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 14:23:29 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/21 22:21:36 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/28 13:42:03 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,3 @@ char	*ft_itoa(int n)
 	}
 	return (rep);
 }
-
-// int main(void)
-// {
-// 	printf("%s\n", ft_itoa(47483648));
-// }

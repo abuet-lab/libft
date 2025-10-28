@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/02 15:41:36 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/11 20:41:04 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/28 13:42:52 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (size);
 }
-
-//  int main (void)
-//  {
-// 	//char test1[] = "lorem ipsum";
-// 	char dst[] = "^@rrrrr^@^@^@^@^@^@^@^@^@";
-// 	//printf("%s\n", test2);
-// 	//printf("%zu\n", ft_strlcpy(test2, test1, 3));
-// 	ft_strlcpy(dst, "", 15);
-// 	printf("%s\n", dst);
-//  }

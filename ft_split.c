@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:58:31 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/24 22:43:47 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/28 13:40:17 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,18 +45,23 @@ static size_t	number_caractere(char const *s, char c)
 	return (count);
 }
 
-static int	free_array(char **array, size_t n)
+static void	free_array(char **array, size_t n)
 {
-	if (!array[n])
+	while (n > 0)
 	{
-		while (n > 0)
-		{
-			free(array[n - 1]);
-			n--;
-		}
-		return (0);
+		free(array[n - 1]);
+		n--;
 	}
-	return (1);
+	free(array);
+}
+
+const char	*forward_pointer(char const *s, char c)
+{
+	while (*s && *s == c)
+	{
+		s++;
+	}
+	return (s);
 }
 
 char	**ft_split(char const *s, char c)
@@ -67,18 +72,19 @@ char	**ft_split(char const *s, char c)
 	char	**split;
 
 	tab1 = 0;
+	if (!s)
+		return (NULL);
 	split = malloc((number_string(s, c) + 1) * sizeof(char *));
-	if (!split || !s)
+	if (!split)
 		return (NULL);
 	words = number_string(s, c);
 	while (tab1 < words)
 	{
-		while (*s && *s == c)
-			s++;
+		s = forward_pointer(s, c);
 		tab2 = number_caractere(s, c);
 		split[tab1] = malloc((tab2 + 1) * sizeof(char));
-		if (free_array(split, tab1) == 0)
-			return (NULL);
+		if (!split[tab1])
+			return (free_array(split, tab1), NULL);
 		ft_strlcpy(split[tab1], s, tab2 + 1);
 		s += tab2;
 		tab1++;
@@ -86,16 +92,3 @@ char	**ft_split(char const *s, char c)
 	split[tab1] = NULL;
 	return (split);
 }
-
-// int main(void)
-// {
-// 	char **split;
-// 	char test[] = "aebec";
-// 	int i = 0;
-// 	split = ft_split(test,'e');
-// 	while (split[i])
-// 	{
-// 		printf("%s\n", split[i]);
-// 		i++;
-// 	}
-// }

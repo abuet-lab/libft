@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: antoinebuet <antoinebuet@student.42.fr>    +#+  +:+       +#+        */
+/*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 15:57:44 by antoinebuet       #+#    #+#             */
-/*   Updated: 2025/10/21 22:19:03 by antoinebuet      ###   ########.fr       */
+/*   Updated: 2025/10/28 13:42:44 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[i] = '\0';
 	return (join);
 }
-
-// int main(void)
-// {
-// 	char test[] = "";
-// 	char test1[] = "j";
-// 	printf("%s", ft_strjoin(test,test1));
-// }

@@ -6,7 +6,7 @@
 /*   By: abuet <abuet@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 16:58:57 by abuet             #+#    #+#             */
-/*   Updated: 2025/10/11 20:39:44 by abuet            ###   ########.fr       */
+/*   Updated: 2025/10/28 13:28:34 by abuet            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return (result * neg);
 }
-
-// int main(void)
-// {
-// 	printf("%d\n", ft_atoi("-12345"));
-// 	printf("%d\n", ft_atoi("   -12345"));
-// 	printf("%d\n", ft_atoi("habsd12345"));
-// 	printf("%d\n", ft_atoi("+123jhv45"));
-// 	printf("%d\n", ft_atoi(" -+12345"));
-//}
